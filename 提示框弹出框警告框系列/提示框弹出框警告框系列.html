@@ -1,0 +1,81 @@
+<!-- author: wyb -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>框系列</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+
+    <!-- 动态提示框 -->
+    <div>
+        <h3>动态提示框:</h3>
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+    </div>
+
+    <!-- 动态弹出框 -->
+    <div>
+        <h3>动态弹出框:</h3>
+        <button type="button" class="btn btn-default" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="right" data-content="向右弹出">向右弹出</button>
+        <button type="button" class="btn btn-default" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="top" data-content="向上弹出">向上弹出</button>
+        <button type="button" class="btn btn-default" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="bottom" data-content="向下弹出">向下弹出</button>
+        <button type="button" class="btn btn-default" data-container="body" data-trigger="focus" data-toggle="popover" data-placement="left" data-content="向左弹出">向左弹出</button>
+    </div>
+
+    <!-- 警告框 -->
+    <div>
+        <h3>警告框: </h3>
+        <div class="bs-example bs-example-standalone" data-example-id="dismissible-alert-js">
+            <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <strong>Alert!</strong> 这是一个警告框
+            </div>
+
+            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4>Danger!</h4>
+                <p>系统提示该操作具有危险性!</p>
+                <p>
+                    <button type="button" class="btn btn-danger">确定</button>
+                    <button type="button" class="btn btn-default">取消</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 引入jQuery -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $("[data-toggle='popover']").popover()
+    })
+
+</script>
+
+</body>
+</html>
